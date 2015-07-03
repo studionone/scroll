@@ -1,6 +1,6 @@
 {
   "name": "scroll",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A function that animates an element’s scrollTop/scrollLeft values.",
   "main": "index.js",
   "dependencies": {
@@ -24,11 +24,11 @@
       "opera": [10, 12, 15],
       "iphone": [6],
       "android": [4.2]
-    }  
+    }
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:michaelrhodes/scroll.git"
+    "url": "git@github.com:studionone/scroll.git"
   },
   "keywords": [
     "scrollTop",
@@ -40,5 +40,5 @@
   "bugs": {
     "url": "https://github.com/michaelrhodes/scroll/issues"
   },
-  "homepage": "https://github.com/michaelrhodes/scroll" 
+  "homepage": "https://github.com/michaelrhodes/scroll"
 }

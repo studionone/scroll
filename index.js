@@ -15,8 +15,8 @@ var scroll = function(direction, element, target, options, callback) {
     type = options.ease || type
     duration = options.duration || duration
   }
-  
-  callback = callback || function() {} 
+
+  callback = callback || function() {}
 
   var start = +new Date
   var from = element['scroll' + direction]
@@ -30,14 +30,15 @@ var scroll = function(direction, element, target, options, callback) {
     cancelled = true
     listener.remove(element, 'mousewheel', cancel)
   }
-  
+
   if (from === to) {
     return callback(new Error(
       'Element already at target position.'
     ))
   }
-  
+
   listener.add(element, 'mousewheel', cancel)
+  listener.add(document.body, 'click', cancel)
 
   var scroll = function(timestamp) {
     if (cancelled) {
@@ -55,8 +56,8 @@ var scroll = function(direction, element, target, options, callback) {
     if (time < 1) {
       return raf(scroll)
     }
-    
-    cancel()  
+
+    cancel()
     callback(null, element['scroll' + direction])
   }
 
