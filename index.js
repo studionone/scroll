@@ -27,8 +27,10 @@ var scroll = function(direction, element, target, options, callback) {
 
   var cancelled = false
   var cancel = function() {
+      console.log('cancelled');
     cancelled = true
     listener.remove(element, 'mousewheel', cancel)
+    listener.remove(document.body, 'click', cancel)
   }
 
   if (from === to) {
