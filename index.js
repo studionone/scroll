@@ -40,6 +40,7 @@ var scroll = function(direction, element, target, options, callback) {
 
   listener.add(element, 'mousewheel', cancel)
   listener.add(document.body, 'click', cancel)
+  listener.add(element, 'touchstart', cancel)
 
   var scroll = function(timestamp) {
     if (cancelled) {
